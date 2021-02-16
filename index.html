@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <title>SVG Graphic</title>
+</head>
+<body>
+  <svg class="koala" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 650 361" xml:space="preserve">
+    <!-- classes indicate what each path represents respectively -->
+    <path class="ear left" d="M93 200l-1-11-4-9-8-11-13-14-9-11-9-13c-3-3-5-9-6-14-2-5-2-11-2-17 0-8 1-16 3-22 3-6 7-12 11-16s10-8 16-10 13-4 20-4c10 0 18 1 26 4 8 2 15 6 22 11v16a70 70 0 00-47-17c-6-1-11 0-15 2s-9 4-12 8l-7 12c-2 5-3 10-3 16a53 53 0 008 29l8 11a255 255 0 0019 20l9 11 6 12 2 14v77H93v-74z"/>
+    <!-- the nose and right eye awkward got lumped together while optimizing? -->
+    <path class="nose righteye" d="M389 273c-7 6-17 10-27 10-3 0-19 39-36 39-16 0-31-39-34-39-11 0-20-3-28-10v-15c8 9 18 14 27 14s17-4 25-12a91 91 0 01-30-66c0-14 4-26 11-35 8-9 17-13 30-13s22 4 29 13 11 20 11 34c0 26-10 48-29 67 8 8 16 12 25 12s18-4 26-13v14zM449 204c-8 0-15-3-21-9s-9-13-9-21 3-15 9-21 13-9 21-9c9 0 16 3 21 9 6 6 9 13 9 21s-3 15-9 21c-5 6-12 9-21 9z"/>
+    <path class="ear right" d="M557 245l-14-1v-47a46 46 0 018-26l8-11a418 418 0 0120-20l8-11 6-13a53 53 0 00-1-32c-2-5-4-9-7-12s-22-11-27-11a70 70 0 00-47 18V63c7-5 14-9 22-11 7-3 16-4 26-4 7 0 13 2 20 4a46 46 0 0126 26c3 6 4 14 4 22a59 59 0 01-8 31c-3 5-5 9-9 13l-9 11a316 316 0 00-21 25 39 39 0 00-5 20v45z"/>
+    <path class="lefteye" d="M204 204c-8 0-15-3-21-9s-9-13-9-21 3-15 9-21 13-9 21-9c9 0 16 3 21 9 6 6 9 13 9 21s-3 15-9 21c-5 6-12 9-21 9z"/>
+    <circle class="dot" cx="548.6" cy="287.1" r="13.6"/>
+  </svg>
+  <div class="searchbar">
+    <input type="text" class="search" placeholder="Ask him anything">
+    <button type="submit" class="searchbtn">???</button>
+  </div>
+  <div class="nite">
+    <button class="nite-toggle mode" onclick="niteToggle()"><i class="far fa-moon"></i> Mode</button>
+  </div>
+  <div class="fun">
+    <button class="fun-toggle mode" onclick="funToggle()"><i class="fas fa-hat-wizard"></i> Mode</button>
+  </div>
+</body>
+</html>
+
+<!-- playing with js mostly - this is definitely not above board -->
+<script>
+  function niteToggle() {
+    const element = document.body;
+    element.classList.remove("fun-mode");
+    element.classList.toggle("nite-mode");
+  }
+
+  function funToggle() {
+    const element =  document.body;
+    element.classList.remove("nite-mode");
+    element.classList.toggle("fun-mode");
+  }
+</script>
